@@ -1,38 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    width: 12rem;
+    height: 12rem;
+    border-top-left-radius :10px;
+    border-top-right-radius :10px;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 80%;
+
 }
 
-.App-link {
-  color: #61dafb;
+.user-card {
+    background-color:cadetblue;
+    border-radius: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-card:hover {
+    outline: 3px solid darkslateblue;
+}
+
+.user-card p {
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+.edit-modal, .add-user-modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .modal-content {
+    background-color:darkslateblue;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+}
+
+.modal-content button {
+    width: 30%;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.green-btn {
+    background-color: green;
+    color: white;
+}
+
+.red-btn {
+    background-color: red;
+    color: white;
+}
+
+.add-user-button {
+    height: 2rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color:salmon;
+    color: white;
+    cursor: pointer;
 }
